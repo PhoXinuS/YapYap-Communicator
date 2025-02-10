@@ -1,20 +1,20 @@
-# PAP grupa projektowa nr. 6
 ## Instrukcja uruchomienia projektu
 
 Należy skopiować poniższe polecenia i uruchomić je w terminalu:
 
 ```bash
-git clone https://gitlab-stud.elka.pw.edu.pl/tokon/pap2024z-z06.git
+git clone https://github.com/PhoXinuS/YapYap-Communicator.git
 cd pap2024z-z06
-docker compose up #wymagany docker do uruchomiena projektu
+docker compose build #wymagany docker do uruchomiena projektu
+docker compose up
 ```
 Po wykonaniu komend uruchom należy przejść w przeglądarce pod link: http://localhost/
 
 ## Skład zespołu:
--   Dominik Śledziewski 331447
--   Jan Szwagierczak 331444
--   Piotr Szkoda 331442
--   Tomasz Okoń 331414
+-   Dominik Śledziewski
+-   Jan Szwagierczak
+-   Piotr Szkoda
+-   Tomasz Okoń
 
 # Dokumentacja Wstępna - Komunikator Tekstowy
 ## Opis Projektu
