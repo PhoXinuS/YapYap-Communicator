@@ -1,0 +1,124 @@
+/* General Container */
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2196f3, #7e57c2);
+    padding: 0 20px; /* Added padding for small screens */
+    box-sizing: border-box;
+}
+
+.signup-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Responsive Form */
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Input Fields */
+.signup-form label {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Submit Button */
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message */
+.signup-error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Header Styling */
+.SignUp-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .signup-title {
+        font-size: 1.5em;
+    }
+
+    .signup-form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .signup-form input {
+        padding: 12px;
+    }
+
+    .signup-form button {
+        padding: 12px;
+        font-size: 1.1em;
+    }
+
+    .signin-redirect {
+        font-size: 0.9em;
+    }
+}
+
+/* Styling for the "Go to Sign In" section */
+.signin-redirect {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signin-link {
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.signin-link:hover {
+    color: #0056b3;
+}

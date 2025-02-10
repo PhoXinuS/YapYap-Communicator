@@ -1,0 +1,197 @@
+/* Container for the entire page */
+
+.posts-container {
+    padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #2196f3, #7e57c2);
+    min-height: 100vh;
+}
+
+/* Styles for each individual post card */
+.post-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header of the post where the date and delete button are */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Date should be centered in the post header */
+.post-header .post-date {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    margin: 0 10px;
+}
+
+/* Delete button for the post (to the right) */
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: 150px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+/* Hover effect for delete button */
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Style for like button */
+.like-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Styles for the comments section */
+.post-comments {
+    margin-top: 20px;
+}
+
+/* Header for comments section */
+.post-comments h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Individual comment styles */
+.comment {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Header for each comment */
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-items: center;
+    position: relative; /* Make sure delete button stays positioned properly */
+}
+
+/* The name of the commenter */
+.comment-header .commenter-name {
+    font-size: 0.9rem;
+}
+
+/* Content of the comment */
+.comment-content {
+    margin-top: 8px;
+}
+
+/* Actions (like and delete) for each comment */
+.comment-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+/* Button to like a comment */
+.comment-actions button {
+    margin-right: 10px;
+}
+
+/* Style for delete button inside comments */
+.comment-header .delete-comment-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hover effect for comment delete button */
+.comment-header .delete-comment-button:hover {
+    background-color: #c0392b;
+}
+
+/* Form styles for new posts */
+.message-form {
+    display: flex;
+    flex-direction: horizontal;
+    width: 60%;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.message-form button {
+    padding: 10px;
+    width: 100px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Form styles for adding comments */
+.comment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: middle;
+    margin-top: 15px;
+}
+
+.comment-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.comment-form button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,348 @@
+
+.friend-list-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #2196f3, #7e57c2);
+    width: 100%;
+    min-width: 100vh;
+}
+
+/* Header Styles */
+.friend-list-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.home-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.home-title {
+    font-size: 24px;
+    color: #000000;
+}
+
+/* Tab Buttons */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    margin: 0 5px;
+    margin-top: 20px;
+    width: 160px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Buttons for Add Friend and Navigation */
+.show-form-btn,
+.add-friend-btn,
+.navigate-main-panel-btn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    background-color: #00aaff;
+    color: black;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.show-form-btn:hover,
+.add-friend-btn:hover,
+.navigate-main-panel-btn:hover {
+    background-color: #003580;
+}
+
+/* Add Friend Form */
+.add-friend-form-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-friend-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 540px;
+}
+
+.add-friend-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Friend List */
+.friend-list-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    height: calc(100vh - 250px); /* Adjust to take the remaining space */
+    margin-top: 20px;
+}
+
+.friend-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.friend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.friend-card {
+    width: 280px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.friend-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.friend-email {
+    font-size: 14px;
+    color: #555;
+}
+
+.remove-friend-btn {
+    padding: 8px 12px;
+    background-color: #f44336;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-friend-btn:hover {
+    background-color: #d32f2f;
+}
+
+.no-friends-message {
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Friend Requests Section */
+.friend-requests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request-card {
+    width: 280px;
+    height: auto;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.request-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.request-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.request-card button {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.request-card button:nth-child(1) {
+    background-color: #28a745;
+}
+
+.request-card button:nth-child(1):hover {
+    background-color: #218838;
+}
+
+.request-card button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.request-card button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* Accept Button Styling */
+.accept-request-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #28a745; /* Green for accept */
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accept-request-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Reject Button Styling */
+.reject-request-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #dc3545; /* Red for reject */
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reject-request-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Add smooth fade-in animation for the request cards */
+.request-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Friend Cards Animation and Styling */
+.friend-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.friend-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Friend Name and Email Styling */
+.friend-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.friend-email {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Remove Friend Button Styling */
+.remove-friend-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #f44336; /* Red for remove */
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.remove-friend-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Add smooth fade-in animation for all friend cards */
+.animated-card {
+    animation: fadeIn 0.5s ease-in-out;
+}

@@ -1,0 +1,356 @@
+
+
+/* General Container */
+.conversations-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top : 40px;
+    background-color: #ffffff
+}
+
+.conversations-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1E90FF;
+    color: white;
+}
+
+.home-logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.home-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.conversations-content {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 40px); /* Adjusts height based on viewport height minus margin-top */
+    margin-top: 2rem;
+}
+
+.conversations-sidebar {
+    width: 250px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.conversations-sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.conversations-list {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.conversation-item {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.conversation-item:hover {
+    background-color: #ddd;
+}
+
+.conversation-item.active {
+    background-color: #ccc;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 90vh; /* Ensures the container doesn't exceed 90% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.messages-title {
+    font-size: 18px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.message-history {
+    margin-top: 1rem;
+}
+
+.message-item {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    word-wrap: break-word; /* Forces wrapping */
+    white-space: pre-wrap; /* Preserves line breaks */
+    max-width: 100%; /* Constrains message width */
+}
+
+
+.group-members-container {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.group-members-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.group-member-item {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.create-group-button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-group-button:hover {
+    background-color: #0056b3;
+}
+
+.add-friend-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: black;
+    border-radius: 4px;
+    height: 100%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-friend-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    z-index: 1; /* Ensures the form is always on top */
+}
+
+.friend-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.friend-item {
+    padding: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.friend-item.selected {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.search-friend-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-friend-to-conversation-button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-friend-to-conversation-button:hover {
+    background-color: #0056b3;
+}
+
+/* Custom Scrollbar */
+.group-members-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.group-members-container::-webkit-scrollbar-thumb {
+    background-color: #1E90FF;
+    border-radius: 5px;
+}
+
+.group-members-container::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+}
+
+.navigation-button-container {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-panel-button {
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.main-panel-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.message-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%; /* Ensures the form does not exceed the container width */
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    position: sticky;
+    bottom: 0;
+    background-color: #fff; /* Ensures the background color matches the container */
+    z-index: 2; /* Ensures it stays above other content */
+}
+
+.message-form input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.message-form button {
+    padding: 8px 12px;
+}
+
+.like-counter {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer; /* Makes the like counter clickable */
+    margin-top: 5px;
+}
+
+.like-counter:hover {
+    text-decoration: underline;
+}
+
+.leave-group-button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.leave-group-button:hover {
+    background-color: #d32f2f;
+}
+
+.group-member-item {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%; /* Takes entire width */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.group-member-item:hover {
+    background-color: #0056b3;
+}
+
+.group-members-list-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+}
+
+.cancel-create-group-button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-create-group-button:hover {
+    background-color: #d32f2f;
+}
+
+.cancel-add-friend-button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-add-friend-button:hover {
+    background-color: #d32f2f;
+}

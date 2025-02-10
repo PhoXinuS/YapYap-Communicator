@@ -1,0 +1,70 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent; /* Make container background transparent */
+    height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #2196f3, #7e57c2);
+}
+
+/* Header Styling */
+.home-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 180px;
+}
+
+.home-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.home-title {
+    font-size: 2em;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Main Content Styling */
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Button Styling with 100px space */
+.home-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 100px; /* Adds 100px space between the text and the buttons */
+}
+
+.home-button {
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100px; /* Fixed width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}

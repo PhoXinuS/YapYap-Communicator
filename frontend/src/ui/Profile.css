@@ -1,0 +1,206 @@
+/* General container and background */
+
+.profile-container {
+    background: linear-gradient(135deg, #2196f3, #7e57c2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Centers content vertically */
+    flex-direction: column;
+}
+
+/* Profile header with background and logo */
+.profile-header {
+    background: linear-gradient(90deg, #00aaff, #0047ab); /* Gradient for the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    width: 100%;
+}
+
+.home-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.home-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Profile form container styling */
+.profile-form-container {
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;  /* Limit the width of the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center content horizontally */
+}
+
+/* Profile title */
+.profile-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0047ab;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Profile info section */
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Edit Name Section */
+.name-edit-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;  /* Make the name edit container take up full width */
+}
+
+.name-input {
+    font-size: 16px;
+    padding: 12px;
+    width: 65%;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.save-name-button,
+.cancel-button {
+    background-color: #0047ab; /* Blue button color */
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.save-name-button:hover,
+.cancel-button:hover {
+    background-color: #003580; /* Darker blue on hover */
+}
+
+.edit-name-button {
+    background-color: #00aaff; /* Different color for the edit button */
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-name-button:hover {
+    background-color: #0099cc; /* Darker blue on hover */
+}
+
+/* Profile Navigation Button */
+.profile-button {
+    background-color: #0047ab; /* Blue button color */
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+    background-color: #003580; /* Darker blue on hover */
+}
+
+/* Add some icons for social interactions or profile pictures (optional) */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Styling for any icons used for user interactions */
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.icon-button:hover {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-form-container {
+        width: 90%;
+    }
+
+    .name-input,
+    .save-name-button,
+    .cancel-button {
+        width: 100%;
+    }
+
+    .save-name-button,
+    .cancel-button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-title {
+        font-size: 28px;
+    }
+
+    .name-input {
+        font-size: 14px;
+    }
+
+    .save-name-button,
+    .cancel-button {
+        padding: 10px 20px;
+    }
+
+    .profile-button {
+        padding: 10px 20px;
+    }
+}
