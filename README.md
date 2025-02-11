@@ -100,7 +100,7 @@ The Text Messenger application allows users to exchange messages in real-time. B
 - **Tomasz** - Frontend & Database  
 - **Jan** - Testing  
 
-## Initial Database Design  
+## Database  
 
 ![1](DB/Schemat.png)  
 
