@@ -1,3 +1,3 @@
-# Wstępny model bazy danych
+# Schema
 
 ![1](Schemat.png)
