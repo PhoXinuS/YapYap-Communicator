@@ -1,122 +1,132 @@
-## Instrukcja uruchomienia projektu
+## Project Startup Instructions
 
-Należy skopiować poniższe polecenia i uruchomić je w terminalu:
+Copy and run the following commands in your terminal:
 
 ```bash
 git clone https://github.com/PhoXinuS/YapYap-Communicator.git
 cd pap2024z-z06
-docker compose build #wymagany docker do uruchomiena projektu
+docker compose build # Docker is required to run the project
 docker compose up
 ```
-Po wykonaniu komend uruchom należy przejść w przeglądarce pod link: http://localhost/
+After executing these commands, open your browser and go to: [http://localhost/](http://localhost/)
 
-## Skład zespołu:
--   Dominik Śledziewski
--   Jan Szwagierczak
--   Piotr Szkoda
--   Tomasz Okoń
+## Team Members:
+-   Dominik Śledziewski  
+-   Jan Szwagierczak  
+-   Piotr Szkoda  
+-   Tomasz Okoń  
 
-# Dokumentacja Wstępna - Komunikator Tekstowy
-## Opis Projektu
-Aplikacja Komunikator Tekstowy umożliwia użytkownikom wymianę wiadomości w czasie rzeczywistym. Dzięki wykorzystaniu technologii WebSocket, komunikacja odbywa się bez opóźnień, co pozwala na natychmiastowe przeglądanie i wysyłanie wiadomości.
+# Initial Documentation - Text Messenger
 
-## Funkcjonalności
--   Rejestracja ✅
--   Logowanie ✅
+## Project Description  
+The Text Messenger application allows users to exchange messages in real-time. By leveraging WebSocket technology, communication occurs without delays, enabling instant message viewing and sending.
 
--   Wyświetlanie informacji o użytkowniku ✅
--   Edytowanie nazwy ✅
+## Features  
+- **User Management**  
+  - Registration ✅  
+  - Login ✅  
+  - Viewing user information ✅  
+  - Editing username ✅  
 
--   Wyświetlanie listy konwersacji ✅
--   Tworzenie konwersacji (w tym grupowych) ✅
--   Rozszerzanie konwersacji ✅
--   Opuszczanie konwersacji ✅
--   Wyświetlanie członków konwersacji ✅
--   Wysyłanie wiadomości ✅
--   Odbieranie wiadomości ✅
--   Reakcje na wiadomości - like ✅
+- **Conversations**  
+  - Viewing conversation list ✅  
+  - Creating conversations (including group chats) ✅  
+  - Expanding conversations ✅  
+  - Leaving conversations ✅  
+  - Viewing conversation members ✅  
+  - Sending messages ✅  
+  - Receiving messages ✅  
+  - Reacting to messages (like) ✅  
 
--   Wyświetlanie listy znajomych ✅
--   Usuwanie znajomych ✅
--   Wysyłanie zaproszeń do znajomych po mailu/id ✅
--   Akceptowanie/odrzucanie zaproszeń ✅
+- **Friends Management**  
+  - Viewing friend list ✅  
+  - Removing friends ✅  
+  - Sending friend requests via email/ID ✅  
+  - Accepting/rejecting friend requests ✅  
 
--   Możliwość postowania (tak jak na facebooku) ✅
--   Możliwość komentowania postów ✅
--   Możliwość reakcji na posta - like ✅
--   Możliwość usuwania postów ✅
+- **Posts & Interactions**  
+  - Creating posts (similar to Facebook) ✅  
+  - Commenting on posts ✅  
+  - Reacting to posts (like) ✅  
+  - Deleting posts ✅  
 
-# Stack Technologiczny
+# Technology Stack  
 
-## Frontend
-### Framework: React.js
-- **Podstawa**: Biblioteka do tworzenia interfejsu użytkownika
-- **Stan aplikacji**:
-  - Context API
-  - React Hooks
-- **Routing**: React Router
-- **WebSocket**: STOMP over SockJS client
-- **HTTP Client**: Axios
-- **Port deweloperski**: 3000
+## Frontend  
+### Framework: React.js  
+- **Core**: UI library  
+- **State Management**:  
+  - Context API  
+  - React Hooks  
+- **Routing**: React Router  
+- **WebSocket**: STOMP over SockJS client  
+- **HTTP Client**: Axios  
+- **Development Port**: 3000  
 
-## Backend
-### Framework: Spring Boot (Java)
-- **Bezpieczeństwo**: Spring Security z JWT
-- **API**: Spring Web (REST)
-- **WebSocket**:
-  - Protokół: STOMP
-  - Fallback: SockJS
-  - Broker: Simple Broker
-  - Endpoint: `/ws`
+## Backend  
+### Framework: Spring Boot (Java)  
+- **Security**: Spring Security with JWT  
+- **API**: Spring Web (REST)  
+- **WebSocket**:  
+  - Protocol: STOMP  
+  - Fallback: SockJS  
+  - Broker: Simple Broker  
+  - Endpoint: `/ws`  
 
-## Baza Danych
-### Oracle Database
-- **ORM**: JPA/Hibernate
-- **Połączenie**: JDBC
-- **Zapytania**: Natywne SQL
+## Database  
+### Oracle Database  
+- **ORM**: JPA/Hibernate  
+- **Connection**: JDBC  
+- **Queries**: Native SQL  
 
-## Narzędzia Deweloperskie
-- **Konteneryzacja**: Docker
-- **Kontrola wersji**: Git
-- **CI/CD**: GitLab, DigitalOcean
-- **Zarządzanie pakietami**:
-  - Frontend: npm/yarn
-  - Backend: Maven
+## Developer Tools  
+- **Containerization**: Docker  
+- **Version Control**: Git  
+- **CI/CD**: GitLab, DigitalOcean  
+- **Package Management**:  
+  - Frontend: npm/yarn  
+  - Backend: Maven  
 
-## Architektura
-- **Wzorzec**: MVC
-- **Komunikacja**:
-  - REST API
-  - WebSocket (real-time)
-- **Autoryzacja**: JWT
+## Architecture  
+- **Pattern**: MVC  
+- **Communication**:  
+  - REST API  
+  - WebSocket (real-time)  
+- **Authorization**: JWT  
 
+## Role Distribution  
+- **Dominik** - Backend  
+- **Piotr** - CI/CD, Server  
+- **Tomasz** - Frontend & Database  
+- **Jan** - Testing  
 
-## Podział ról
--   Dominik - backend
--   Piotr - CI/CD, serwer
--   Tomasz - frontend i baza danych
--   Jan - testy
+## Initial Database Design  
 
-## Wstępna baza danych
+![1](DB/Schemat.png)  
 
-![1](DB/Schemat.png)
+## Initial UI Design  
 
-## Wstępny projekt UI
+### Home Page  
+![2](UI/1.png)  
 
-### Strona główna
-![2](UI/1.png)
-### Panel rejestracji
-![3](UI/2.png)
-### Panel logowania
-![4](UI/3.png)
-### Profil
-![5](UI/5.png)
-### Edycja nazwy
-![6](UI/6.png)
-### Posty
-![7](UI/7.png)
-### Konwersacje
-![8](UI/8.png)
-### Lista znajomych
-![9](UI/9.png)
+### Registration Panel  
+![3](UI/2.png)  
+
+### Login Panel  
+![4](UI/3.png)  
+
+### Profile  
+![5](UI/5.png)  
+
+### Username Editing  
+![6](UI/6.png)  
+
+### Posts  
+![7](UI/7.png)  
+
+### Conversations  
+![8](UI/8.png)  
+
+### Friends List  
+![9](UI/9.png)  
 
